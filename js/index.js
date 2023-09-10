@@ -53,6 +53,7 @@ function clear(characters) {
     radioBtn.forEach(btn => btn.checked = false);
     characterHTML = '';
     searchBar.value='';
+    page = 1;
     showCharacters(characters);
     allInfo = characters;
     if (lastCharacter) {
@@ -91,7 +92,6 @@ async function getData() {
         }
         
         allInfo.push(...arrInfo);
-        console.log(allInfo);
         
         showCharacters(arrInfo);
         
