@@ -12,7 +12,7 @@ const alive = document.getElementById('alive');
 const dead = document.getElementById('dead');
 const female = document.getElementById('female');
 const male = document.getElementById('male');
-// Creo una instancia de IntersectionObserver
+
 let observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if(entry.isIntersecting){
@@ -54,7 +54,7 @@ function clear(characters) {
     characterHTML = '';
     searchBar.value='';
     showCharacters(characters);
-
+    allInfo = characters;
     if (lastCharacter) {
         observer.unobserve(lastCharacter);
     }
